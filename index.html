@@ -136,6 +136,7 @@ footer { text-align: center; padding: 25px 10px; margin-top: 25px; font-size: 12
         <p class="grade-entry-note">Sınıf sütunundaki değerler 5-A, 6/B, 7A veya 8. Sınıf gibi sınıf düzeyini belirten bir biçimde olmalıdır.</p>
     </div>
 </div>
+
 <div id="appShell" style="display:none">
 <header>
     <div class="header-controls">
@@ -144,6 +145,7 @@ footer { text-align: center; padding: 25px 10px; margin-top: 25px; font-size: 12
     <h1>DENEME SINAVI ANALİZLERİ</h1>
     <h2 id="gradeSubtitle">SINIF DÜZEYİ SEÇİLMEDİ</h2>
 </header>
+
 <div class="container">
 <div class="main-content">
     <div class="main-tabs">
@@ -151,6 +153,7 @@ footer { text-align: center; padding: 25px 10px; margin-top: 25px; font-size: 12
         <button id="tabSinifBtn" type="button" onclick="switchMainTab('sinif')">🏫 Sınıf Analizi</button>
         <button id="tabSiralamaBtn" type="button" onclick="switchMainTab('siralama')">🏆 Genel Sıralama</button>
     </div>
+
     <div id="loadingMsg" class="loading-overlay">⏳ Veriler yükleniyor, lütfen bekleyin...</div>
     <div id="errorMsg" class="error-box"></div>
 
@@ -167,6 +170,7 @@ footer { text-align: center; padding: 25px 10px; margin-top: 25px; font-size: 12
                 </div>
             </div>
         </div>
+
         <div class="branch-tabs" id="branchTabs">
             <button class="active" type="button" onclick="setBranch('total', this)">Toplam Net</button>
             <button class="lgs-only" type="button" onclick="setBranch('lgs', this)">LGS Puanı</button>
@@ -177,19 +181,23 @@ footer { text-align: center; padding: 25px 10px; margin-top: 25px; font-size: 12
             <button type="button" onclick="setBranch('mat', this)">Matematik</button>
             <button type="button" onclick="setBranch('fen', this)">Fen</button>
         </div>
+
         <div class="chart-box">
             <svg id="devChart" viewBox="0 0 1000 400" preserveAspectRatio="none" role="img" aria-label="Öğrenci gelişim grafiği"></svg>
         </div>
+
         <div class="chart-legend">
             <span class="legend-item"><span class="legend-line"></span> Öğrenci</span>
             <span class="legend-item"><span class="legend-line school"></span> Okul Ortalaması</span>
         </div>
+
         <div class="stats-container" id="statsContainer"></div>
+
         <div class="table-container">
             <table id="resTable">
                 <thead><tr>
                     <th>Sınav</th><th>TÜR</th><th>SOS/İNK</th><th>DİN</th><th>İNG</th>
-                    <th>MAT</th><th>FEN</th><th>TOPLAM NET</th><th class="lgs-only">LGS PUANI</th>
+                    <th>MAT</th><th>FEN</th><th>TOPLAM NET</th><th class="lgs-only">LGS Puanı</th>
                 </tr></thead>
                 <tbody></tbody>
             </table>
@@ -213,12 +221,14 @@ footer { text-align: center; padding: 25px 10px; margin-top: 25px; font-size: 12
                 </select>
             </div>
         </div>
+
         <div class="stats-container" id="examAveragesContainer" style="display:none;margin-bottom:20px;"></div>
+
         <div class="table-container">
             <table id="rankTable">
                 <thead><tr>
                     <th>Sıra</th><th>Öğrenci Adı Soyadı</th><th>Sınıf</th><th>TÜR</th><th>SOS/İNK</th><th>DİN</th>
-                    <th>İNG</th><th>MAT</th><th>FEN</th><th>TOPLAM NET</th><th class="lgs-only">LGS PUANI</th>
+                    <th>İNG</th><th>MAT</th><th>FEN</th><th>TOPLAM NET</th><th class="lgs-only">LGS Puanı</th>
                 </tr></thead>
                 <tbody></tbody>
             </table>
@@ -252,6 +262,7 @@ footer { text-align: center; padding: 25px 10px; margin-top: 25px; font-size: 12
         <div class="chart-box">
             <svg id="classTrendChart" viewBox="0 0 1000 400" preserveAspectRatio="none" role="img" aria-label="Sınıf ortalamalarının sınavlara göre değişim grafiği"></svg>
         </div>
+
         <div class="chart-legend" id="classTrendLegend"></div>
         <p class="class-analysis-note">Bir sınıf seçildiğinde kesikli çizgi, aynı sınavdaki okul ortalamasını gösterir. Tüm Sınıflar seçildiğinde yalnızca seçilen sınıf düzeyinin tüm şubeleri birlikte değerlendirilir.</p>
 
@@ -260,7 +271,7 @@ footer { text-align: center; padding: 25px 10px; margin-top: 25px; font-size: 12
             <table id="classTrendTable">
                 <thead><tr>
                     <th>Sınav</th><th>Katılan Öğrenci</th><th>TÜR Ort.</th><th>SOS/İNK Ort.</th><th>DİN Ort.</th>
-                    <th>İNG Ort.</th><th>MAT Ort.</th><th>FEN Ort.</th><th>GENEL NET Ort.</th><th class="lgs-only">LGS PUAN Ort.</th>
+                    <th>İNG Ort.</th><th>MAT Ort.</th><th>FEN Ort.</th><th>GENEL NET Ort.</th><th class="lgs-only">LGS Puanı</th>
                 </tr></thead>
                 <tbody></tbody>
             </table>
@@ -268,19 +279,30 @@ footer { text-align: center; padding: 25px 10px; margin-top: 25px; font-size: 12
     </div>
 </div>
 </div>
-<footer>
-</footer>
 
+<footer></footer>
 </div>
+
 <script>
 /*
   Veri kaynağı Google Sheets değildir; GitHub Actions'ın oluşturduğu data.csv dosyasıdır.
-  Yeni Google Sheets sütun sırası:
-  A Öğrenci Adı Soyadı | B Sınıfı | C Sınav Adı | D Türkçe | E Sosyal/İnkılap
-  F Din | G İngilizce | H Matematik | I Fen | J LGS Puanı
+
+  CSV sütun sırası:
+  A Öğrenci Adı Soyadı
+  B Sınıfı
+  C Sınav Adı
+  D Türkçe
+  E Sosyal/İnkılap
+  F Din
+  G İngilizce
+  H Matematik
+  I Fen
+  J LGS Puanı
 */
+
 const DATA_URL = 'data.csv';
 const ALL_CLASSES = '__ALL_CLASSES__';
+
 let dataStore = [];
 let currentBranch = 'total';
 let activeGrade = null;
@@ -303,12 +325,17 @@ function openGrade(grade) {
     document.getElementById('gradeEntry').style.display = 'none';
     document.getElementById('appShell').style.display = 'block';
     document.getElementById('gradeSubtitle').textContent = activeGrade + '. SINIFLAR';
+
     applyGradeMode();
-    if (dataStore.length) renderActiveGrade();
-    else if (dataLoadError) {
+
+    if (dataStore.length) {
+        renderActiveGrade();
+    } else if (dataLoadError) {
         document.getElementById('loadingMsg').style.display = 'none';
         showError('Veriler yüklenemedi: ' + dataLoadError);
-    } else document.getElementById('loadingMsg').style.display = 'block';
+    } else {
+        document.getElementById('loadingMsg').style.display = 'block';
+    }
 }
 
 function returnToGradeSelection() {
@@ -317,61 +344,77 @@ function returnToGradeSelection() {
     document.getElementById('gradeEntry').style.display = 'flex';
 }
 
+/*
+  LGS PUANI TÜM SINIF DÜZEYLERİNDE AKTİFTİR.
+  Önceki sürümde bu alanlar yalnızca 8. sınıfta gösteriliyordu.
+  Artık 5, 6, 7 ve 8. sınıflarda aynı şekilde görünür.
+*/
 function applyGradeMode() {
-    const isGrade8 = activeGrade === 8;
     document.querySelectorAll('.lgs-only').forEach(element => {
-        element.style.display = isGrade8 ? '' : 'none';
-        if (element.tagName === 'OPTION') element.disabled = !isGrade8;
+        element.style.display = '';
+
+        if (element.tagName === 'OPTION') {
+            element.disabled = false;
+        }
     });
-    const sortFilter = document.getElementById('sortFilter');
-    const metricFilter = document.getElementById('classMetricFilter');
-    if (!isGrade8) {
-        if (sortFilter.value === 'lgs') sortFilter.value = 'total';
-        if (metricFilter.value === 'lgs') metricFilter.value = 'total';
-        if (currentBranch === 'lgs') currentBranch = 'total';
-        document.querySelectorAll('#branchTabs button').forEach(button => button.classList.remove('active'));
-        const totalButton = document.querySelector('#branchTabs button[onclick*="total"]');
-        if (totalButton) totalButton.classList.add('active');
-    }
 }
 
 function renderActiveGrade() {
     if (activeGrade === null) return;
+
     applyGradeMode();
     dropdownlariGuncelle();
     analizGuncelle();
     siralamaGuncelle();
     sinifAnaliziGuncelle();
+
     const gradeRecords = getActiveGradeData();
+
     if (!gradeRecords.length && dataStore.length) {
-        showError(activeGrade + '. sınıfa ait kayıt bulunamadı. CSV dosyasındaki “Sınıfı” sütununda 5-A, 6/B, 7A veya 8-A gibi sınıf bilgileri bulunduğunu kontrol edin.');
+        showError(
+            activeGrade + '. sınıfa ait kayıt bulunamadı. CSV dosyasındaki “Sınıfı” sütununda 5-A, 6/B, 7A veya 8-A gibi sınıf bilgileri bulunduğunu kontrol edin.'
+        );
     } else {
         hideError();
     }
 }
 
-
 const branchNames = {
-    total:'Toplam Net', lgs:'LGS Puanı', tur:'Türkçe', ink:'Sosyal/İnkılap',
-    din:'Din', ing:'İngilizce', mat:'Matematik', fen:'Fen'
+    total: 'Toplam Net',
+    lgs: 'LGS Puanı',
+    tur: 'Türkçe',
+    ink: 'Sosyal/İnkılap',
+    din: 'Din',
+    ing: 'İngilizce',
+    mat: 'Matematik',
+    fen: 'Fen'
 };
 
 function escapeHtml(value) {
     return String(value == null ? '' : value)
-        .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
-        .replace(/"/g,'&quot;').replace(/'/g,'&#039;');
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
 }
 
 function parseNum(value) {
     if (value == null || String(value).trim() === '') return 0;
-    let s = String(value).trim().replace(/\s/g,'');
+
+    let s = String(value).trim().replace(/\s/g, '');
+
     const comma = s.lastIndexOf(',');
     const dot = s.lastIndexOf('.');
+
     if (comma > -1 && dot > -1) {
-        s = comma > dot ? s.replace(/\./g,'').replace(',','.') : s.replace(/,/g,'');
+        s = comma > dot
+            ? s.replace(/\./g, '').replace(',', '.')
+            : s.replace(/,/g, '');
     } else if (comma > -1) {
-        s = s.replace(',','.');
+        s = s.replace(',', '.');
     }
+
     const n = Number(s);
     return Number.isFinite(n) ? n : 0;
 }
@@ -379,42 +422,71 @@ function parseNum(value) {
 /* Virgül veya noktalı virgül ayraçlı CSV; tırnaklı hücreleri destekler. */
 function parseCSV(text) {
     text = String(text || '').replace(/^\uFEFF/, '');
+
     let separator = ',';
-    let inQuotes = false, commas = 0, semicolons = 0;
+    let inQuotes = false;
+    let commas = 0;
+    let semicolons = 0;
+
     for (let i = 0; i < text.length; i++) {
         const ch = text[i];
+
         if (ch === '"') {
-            if (inQuotes && text[i + 1] === '"') i++;
-            else inQuotes = !inQuotes;
+            if (inQuotes && text[i + 1] === '"') {
+                i++;
+            } else {
+                inQuotes = !inQuotes;
+            }
         } else if (!inQuotes) {
             if (ch === ',') commas++;
             if (ch === ';') semicolons++;
             if (ch === '\n' || ch === '\r') break;
         }
     }
+
     separator = semicolons > commas ? ';' : ',';
 
     const rows = [];
-    let row = [], field = '';
+    let row = [];
+    let field = '';
+
     inQuotes = false;
+
     for (let i = 0; i < text.length; i++) {
         const ch = text[i];
+
         if (ch === '"') {
-            if (inQuotes && text[i + 1] === '"') { field += '"'; i++; }
-            else inQuotes = !inQuotes;
+            if (inQuotes && text[i + 1] === '"') {
+                field += '"';
+                i++;
+            } else {
+                inQuotes = !inQuotes;
+            }
         } else if (ch === separator && !inQuotes) {
-            row.push(field.trim()); field = '';
+            row.push(field.trim());
+            field = '';
         } else if ((ch === '\n' || ch === '\r') && !inQuotes) {
             if (ch === '\r' && text[i + 1] === '\n') i++;
-            row.push(field.trim()); field = '';
-            if (row.some(v => String(v).trim() !== '')) rows.push(row);
+
+            row.push(field.trim());
+            field = '';
+
+            if (row.some(v => String(v).trim() !== '')) {
+                rows.push(row);
+            }
+
             row = [];
         } else {
             field += ch;
         }
     }
+
     row.push(field.trim());
-    if (row.some(v => String(v).trim() !== '')) rows.push(row);
+
+    if (row.some(v => String(v).trim() !== '')) {
+        rows.push(row);
+    }
+
     return rows;
 }
 
@@ -423,6 +495,7 @@ function showError(message) {
     box.textContent = message;
     box.style.display = 'block';
 }
+
 function hideError() {
     const box = document.getElementById('errorMsg');
     box.textContent = '';
@@ -431,27 +504,48 @@ function hideError() {
 
 async function verileriGetir() {
     const loading = document.getElementById('loadingMsg');
+
     loading.style.display = 'block';
     hideError();
+
     try {
         const response = await fetch(DATA_URL + '?v=' + Date.now(), {
-            method: 'GET', cache: 'no-store', credentials: 'same-origin'
+            method: 'GET',
+            cache: 'no-store',
+            credentials: 'same-origin'
         });
-        if (!response.ok) throw new Error('data.csv alınamadı (HTTP ' + response.status + ').');
+
+        if (!response.ok) {
+            throw new Error('data.csv alınamadı (HTTP ' + response.status + ').');
+        }
+
         const raw = await response.text();
-        if (!raw.trim()) throw new Error('data.csv boş.');
-        if (/^\s*<(?:!DOCTYPE|html)/i.test(raw)) throw new Error('data.csv yerine HTML sayfası geldi.');
+
+        if (!raw.trim()) {
+            throw new Error('data.csv boş.');
+        }
+
+        if (/^\s*<(?:!DOCTYPE|html)/i.test(raw)) {
+            throw new Error('data.csv yerine HTML sayfası geldi.');
+        }
 
         const rows = parseCSV(raw);
-        if (rows.length < 2) throw new Error('Henüz öğrenci verisi yayınlanmamış.');
+
+        if (rows.length < 2) {
+            throw new Error('Henüz öğrenci verisi yayınlanmamış.');
+        }
 
         const parsed = [];
+
         for (let i = 1; i < rows.length; i++) {
             const c = rows[i];
+
             if (c.length < 10) continue;
+
             const name = String(c[0] || '').trim();
             const className = String(c[1] || '').trim() || 'Sınıfı Belirtilmemiş';
             const exam = String(c[2] || '').trim();
+
             if (!name || !exam) continue;
 
             const tur = parseNum(c[3]);
@@ -461,41 +555,87 @@ async function verileriGetir() {
             const mat = parseNum(c[7]);
             const fen = parseNum(c[8]);
             const lgs = parseNum(c[9]);
+
             parsed.push({
-                name, className, exam, tur, ink, din, ing, mat, fen, lgs,
+                name,
+                className,
+                exam,
+                tur,
+                ink,
+                din,
+                ing,
+                mat,
+                fen,
+                lgs,
                 total: tur + ink + din + ing + mat + fen
             });
         }
-        if (!parsed.length) throw new Error('Kullanılabilir öğrenci kaydı bulunamadı. Sütun sırasını kontrol edin.');
+
+        if (!parsed.length) {
+            throw new Error('Kullanılabilir öğrenci kaydı bulunamadı. Sütun sırasını kontrol edin.');
+        }
 
         dataStore = parsed;
         dataLoaded = true;
         dataLoadError = '';
+
         const gradeStatus = document.getElementById('gradeEntryStatus');
+
         const gradeCounts = [5, 6, 7, 8].map(grade => {
-            const gradeStudents = new Set(parsed.filter(d => getGradeFromClassName(d.className) === grade).map(d => JSON.stringify([d.name, d.className])));
+            const gradeStudents = new Set(
+                parsed
+                    .filter(d => getGradeFromClassName(d.className) === grade)
+                    .map(d => JSON.stringify([d.name, d.className]))
+            );
+
             return `${grade}. sınıf: ${gradeStudents.size} öğrenci`;
         }).join('  •  ');
+
         gradeStatus.textContent = 'Veriler yüklendi. ' + gradeCounts;
-        if (activeGrade !== null) renderActiveGrade();
+
+        if (activeGrade !== null) {
+            renderActiveGrade();
+        }
+
     } catch (e) {
         console.error(e);
+
         dataStore = [];
         dataLoaded = true;
         dataLoadError = e.message;
-        document.getElementById('gradeEntryStatus').textContent = 'Veriler yüklenemedi: ' + e.message;
-        document.getElementById('studentFilter').innerHTML = '<option value="">-- Veri alınamadı --</option>';
-        document.getElementById('examFilter').innerHTML = '<option value="">-- Veri alınamadı --</option>';
-        document.getElementById('classFilter').innerHTML = '<option value="">-- Veri alınamadı --</option>';
-        document.getElementById('classAnalysisFilter').innerHTML = '<option value="">-- Veri alınamadı --</option>';
-        document.querySelector('#resTable tbody').innerHTML = '<tr><td colspan="9">Veriler yüklenemedi.</td></tr>';
-        document.querySelector('#rankTable tbody').innerHTML = '<tr><td colspan="11">Veriler yüklenemedi.</td></tr>';
-        document.querySelector('#classTrendTable tbody').innerHTML = '<tr><td colspan="10">Veriler yüklenemedi.</td></tr>';
+
+        document.getElementById('gradeEntryStatus').textContent =
+            'Veriler yüklenemedi: ' + e.message;
+
+        document.getElementById('studentFilter').innerHTML =
+            '<option value="">-- Veri alınamadı --</option>';
+
+        document.getElementById('examFilter').innerHTML =
+            '<option value="">-- Veri alınamadı --</option>';
+
+        document.getElementById('classFilter').innerHTML =
+            '<option value="">-- Veri alınamadı --</option>';
+
+        document.getElementById('classAnalysisFilter').innerHTML =
+            '<option value="">-- Veri alınamadı --</option>';
+
+        document.querySelector('#resTable tbody').innerHTML =
+            '<tr><td colspan="9">Veriler yüklenemedi.</td></tr>';
+
+        document.querySelector('#rankTable tbody').innerHTML =
+            '<tr><td colspan="11">Veriler yüklenemedi.</td></tr>';
+
+        document.querySelector('#classTrendTable tbody').innerHTML =
+            '<tr><td colspan="10">Veriler yüklenemedi.</td></tr>';
+
         document.getElementById('statsContainer').innerHTML = '';
         document.getElementById('examAveragesContainer').style.display = 'none';
+
         drawEmptyChart('Veri yüklenemedi');
         drawEmptySvg('classTrendChart', 'Veri yüklenemedi');
+
         showError('Veri yüklenemedi: ' + e.message);
+
     } finally {
         loading.style.display = 'none';
     }
@@ -503,15 +643,21 @@ async function verileriGetir() {
 
 function addOption(select, text, value, bold = false) {
     const opt = document.createElement('option');
+
     opt.textContent = text;
     opt.value = value;
-    if (bold) opt.style.fontWeight = 'bold';
+
+    if (bold) {
+        opt.style.fontWeight = 'bold';
+    }
+
     select.appendChild(opt);
 }
 
 function updateIndividualStudentOptions() {
     const classSelect = document.getElementById('individualClassFilter');
     const studentSelect = document.getElementById('studentFilter');
+
     const previousStudent = studentSelect.value;
     const selectedClass = classSelect.value;
 
@@ -519,6 +665,7 @@ function updateIndividualStudentOptions() {
     addOption(studentSelect, '-- Öğrenci Seçin --', '');
 
     const gradeRecords = getActiveGradeData();
+
     const availableRecords = !selectedClass
         ? []
         : selectedClass === ALL_CLASSES
@@ -527,21 +674,43 @@ function updateIndividualStudentOptions() {
 
     // Aynı isimli öğrencileri sınıf bilgisiyle ayrı kayıtlar olarak tut.
     const uniqueStudents = new Map();
+
     availableRecords.forEach(d => {
         const key = JSON.stringify([d.name, d.className]);
-        if (!uniqueStudents.has(key)) uniqueStudents.set(key, { name: d.name, className: d.className });
+
+        if (!uniqueStudents.has(key)) {
+            uniqueStudents.set(key, {
+                name: d.name,
+                className: d.className
+            });
+        }
     });
 
     const students = [...uniqueStudents.values()];
     const nameCounts = new Map();
-    students.forEach(student => nameCounts.set(student.name, (nameCounts.get(student.name) || 0) + 1));
-    students.sort((a, b) => a.name.localeCompare(b.name, 'tr') || a.className.localeCompare(b.className, 'tr'));
+
+    students.forEach(student => {
+        nameCounts.set(
+            student.name,
+            (nameCounts.get(student.name) || 0) + 1
+        );
+    });
+
+    students.sort((a, b) =>
+        a.name.localeCompare(b.name, 'tr') ||
+        a.className.localeCompare(b.className, 'tr')
+    );
 
     students.forEach(student => {
         const label = nameCounts.get(student.name) > 1
             ? `${student.name} (${student.className})`
             : student.name;
-        addOption(studentSelect, label, JSON.stringify([student.name, student.className]));
+
+        addOption(
+            studentSelect,
+            label,
+            JSON.stringify([student.name, student.className])
+        );
     });
 
     if ([...studentSelect.options].some(option => option.value === previousStudent)) {
@@ -556,53 +725,99 @@ function bireyselSinifGuncelle() {
 
 function dropdownlariGuncelle() {
     const gradeRecords = getActiveGradeData();
+
     const individualClassSelect = document.getElementById('individualClassFilter');
     const previousIndividualClass = individualClassSelect.value;
+
     individualClassSelect.innerHTML = '';
+
     addOption(individualClassSelect, '-- Sınıf Seçin --', '');
     addOption(individualClassSelect, 'Tüm Sınıflar', ALL_CLASSES, true);
-    [...new Set(gradeRecords.map(d => d.className))].sort((a, b) => a.localeCompare(b, 'tr'))
-        .forEach(className => addOption(individualClassSelect, className, className));
-    const availableIndividualClasses = [...individualClassSelect.options].map(option => option.value);
-    individualClassSelect.value = availableIndividualClasses.includes(previousIndividualClass) && previousIndividualClass !== ''
-        ? previousIndividualClass : ALL_CLASSES;
+
+    [...new Set(gradeRecords.map(d => d.className))]
+        .sort((a, b) => a.localeCompare(b, 'tr'))
+        .forEach(className => {
+            addOption(individualClassSelect, className, className);
+        });
+
+    const availableIndividualClasses = [...individualClassSelect.options]
+        .map(option => option.value);
+
+    individualClassSelect.value =
+        availableIndividualClasses.includes(previousIndividualClass) &&
+        previousIndividualClass !== ''
+            ? previousIndividualClass
+            : ALL_CLASSES;
+
     updateIndividualStudentOptions();
 
     const classAnalysisSelect = document.getElementById('classAnalysisFilter');
     const previousAnalysisClass = classAnalysisSelect.value;
+
     classAnalysisSelect.innerHTML = '';
+
     addOption(classAnalysisSelect, '-- Sınıf Seçin --', '');
     addOption(classAnalysisSelect, 'Tüm Sınıflar', ALL_CLASSES, true);
-    [...new Set(gradeRecords.map(d => d.className))].sort((a, b) => a.localeCompare(b, 'tr'))
-        .forEach(className => addOption(classAnalysisSelect, className, className));
+
+    [...new Set(gradeRecords.map(d => d.className))]
+        .sort((a, b) => a.localeCompare(b, 'tr'))
+        .forEach(className => {
+            addOption(classAnalysisSelect, className, className);
+        });
+
     const analysisClasses = [...classAnalysisSelect.options].map(o => o.value);
-    classAnalysisSelect.value = analysisClasses.includes(previousAnalysisClass) && previousAnalysisClass !== ''
-        ? previousAnalysisClass : ALL_CLASSES;
+
+    classAnalysisSelect.value =
+        analysisClasses.includes(previousAnalysisClass) &&
+        previousAnalysisClass !== ''
+            ? previousAnalysisClass
+            : ALL_CLASSES;
 
     const examSelect = document.getElementById('examFilter');
     const previousExam = examSelect.value;
+
     examSelect.innerHTML = '';
+
     addOption(examSelect, '-- Sınav Seçin --', '');
     addOption(examSelect, '🏆 Tüm Sınavların Genel Ortalaması', 'GENEL_ORTALAMA', true);
-    [...new Set(gradeRecords.map(d => d.exam))].forEach(exam => addOption(examSelect, exam, exam));
-    if ([...examSelect.options].some(o => o.value === previousExam)) examSelect.value = previousExam;
+
+    [...new Set(gradeRecords.map(d => d.exam))]
+        .forEach(exam => {
+            addOption(examSelect, exam, exam);
+        });
+
+    if ([...examSelect.options].some(o => o.value === previousExam)) {
+        examSelect.value = previousExam;
+    }
 
     const classSelect = document.getElementById('classFilter');
     const previousClass = classSelect.value;
+
     classSelect.innerHTML = '';
+
     addOption(classSelect, '-- Sınıf Seçin --', '');
     addOption(classSelect, 'Tüm Sınıflar', ALL_CLASSES, true);
-    [...new Set(gradeRecords.map(d => d.className))].sort((a, b) => a.localeCompare(b, 'tr'))
-        .forEach(className => addOption(classSelect, className, className));
+
+    [...new Set(gradeRecords.map(d => d.className))]
+        .sort((a, b) => a.localeCompare(b, 'tr'))
+        .forEach(className => {
+            addOption(classSelect, className, className);
+        });
+
     const availableClasses = [...classSelect.options].map(o => o.value);
-    classSelect.value = availableClasses.includes(previousClass) && previousClass !== ''
-        ? previousClass : ALL_CLASSES;
+
+    classSelect.value =
+        availableClasses.includes(previousClass) &&
+        previousClass !== ''
+            ? previousClass
+            : ALL_CLASSES;
 }
 
 function siralamaGuncelle() {
     const exam = document.getElementById('examFilter').value;
     const selectedClass = document.getElementById('classFilter').value || ALL_CLASSES;
     const sortKey = document.getElementById('sortFilter').value;
+
     const tbody = document.querySelector('#rankTable tbody');
     const avgContainer = document.getElementById('examAveragesContainer');
 
@@ -614,54 +829,126 @@ function siralamaGuncelle() {
     }
 
     const gradeRecords = getActiveGradeData();
+
     const classData = selectedClass === ALL_CLASSES
         ? gradeRecords.slice()
         : gradeRecords.filter(d => d.className === selectedClass);
 
     let displayData = [];
+
     if (exam === 'GENEL_ORTALAMA') {
         const groups = new Map();
+
         classData.forEach(d => {
             const key = JSON.stringify([d.name, d.className]);
+
             if (!groups.has(key)) {
-                groups.set(key, { name: d.name, className: d.className, tur: 0, ink: 0, din: 0, ing: 0, mat: 0, fen: 0, lgs: 0, total: 0, count: 0 });
+                groups.set(key, {
+                    name: d.name,
+                    className: d.className,
+                    tur: 0,
+                    ink: 0,
+                    din: 0,
+                    ing: 0,
+                    mat: 0,
+                    fen: 0,
+                    lgs: 0,
+                    total: 0,
+                    count: 0
+                });
             }
+
             const g = groups.get(key);
-            ['tur', 'ink', 'din', 'ing', 'mat', 'fen', 'lgs', 'total'].forEach(k => g[k] += d[k]);
+
+            ['tur', 'ink', 'din', 'ing', 'mat', 'fen', 'lgs', 'total']
+                .forEach(k => {
+                    g[k] += d[k];
+                });
+
             g.count++;
         });
+
         displayData = [...groups.values()].map(g => ({
-            name: g.name, className: g.className,
-            tur: g.tur / g.count, ink: g.ink / g.count, din: g.din / g.count,
-            ing: g.ing / g.count, mat: g.mat / g.count, fen: g.fen / g.count,
-            lgs: g.lgs / g.count, total: g.total / g.count
+            name: g.name,
+            className: g.className,
+            tur: g.tur / g.count,
+            ink: g.ink / g.count,
+            din: g.din / g.count,
+            ing: g.ing / g.count,
+            mat: g.mat / g.count,
+            fen: g.fen / g.count,
+            lgs: g.lgs / g.count,
+            total: g.total / g.count
         }));
+
     } else {
         displayData = classData.filter(d => d.exam === exam).slice();
     }
 
-    displayData.sort((a, b) => (b[sortKey] || 0) - (a[sortKey] || 0));
+    displayData.sort((a, b) =>
+        (b[sortKey] || 0) - (a[sortKey] || 0)
+    );
 
     if (!displayData.length) {
         avgContainer.style.display = 'none';
         avgContainer.innerHTML = '';
-        tbody.innerHTML = '<tr><td colspan="11">Seçilen sınav ve sınıfa ait kayıt bulunamadı.</td></tr>';
+
+        tbody.innerHTML =
+            '<tr><td colspan="11">Seçilen sınav ve sınıfa ait kayıt bulunamadı.</td></tr>';
+
         return;
     }
 
-    const average = key => (displayData.reduce((sum, d) => sum + d[key], 0) / displayData.length).toFixed(2);
+    const average = key =>
+        (displayData.reduce((sum, d) => sum + d[key], 0) / displayData.length).toFixed(2);
+
     avgContainer.innerHTML = `
-        <div class="stat-card"><h4>TÜR Ort.</h4><div class="stat-value">${average('tur')}</div></div>
-        <div class="stat-card"><h4>SOS/İNK Ort.</h4><div class="stat-value">${average('ink')}</div></div>
-        <div class="stat-card"><h4>DİN Ort.</h4><div class="stat-value">${average('din')}</div></div>
-        <div class="stat-card"><h4>İNG Ort.</h4><div class="stat-value">${average('ing')}</div></div>
-        <div class="stat-card"><h4>MAT Ort.</h4><div class="stat-value">${average('mat')}</div></div>
-        <div class="stat-card"><h4>FEN Ort.</h4><div class="stat-value">${average('fen')}</div></div>
-        <div class="stat-card highlight"><h4>Top. Net</h4><div class="stat-value" style="color:#2980b9">${average('total')}</div></div>
-        ${activeGrade === 8 ? `<div class="stat-card highlight"><h4>LGS Puan</h4><div class="stat-value" style="color:#e67e22">${average('lgs')}</div></div>` : ''}`;
+        <div class="stat-card">
+            <h4>TÜR Ort.</h4>
+            <div class="stat-value">${average('tur')}</div>
+        </div>
+
+        <div class="stat-card">
+            <h4>SOS/İNK Ort.</h4>
+            <div class="stat-value">${average('ink')}</div>
+        </div>
+
+        <div class="stat-card">
+            <h4>DİN Ort.</h4>
+            <div class="stat-value">${average('din')}</div>
+        </div>
+
+        <div class="stat-card">
+            <h4>İNG Ort.</h4>
+            <div class="stat-value">${average('ing')}</div>
+        </div>
+
+        <div class="stat-card">
+            <h4>MAT Ort.</h4>
+            <div class="stat-value">${average('mat')}</div>
+        </div>
+
+        <div class="stat-card">
+            <h4>FEN Ort.</h4>
+            <div class="stat-value">${average('fen')}</div>
+        </div>
+
+        <div class="stat-card highlight">
+            <h4>Top. Net</h4>
+            <div class="stat-value" style="color:#2980b9">${average('total')}</div>
+        </div>
+
+        <div class="stat-card highlight">
+            <h4>LGS Puan</h4>
+            <div class="stat-value" style="color:#e67e22">${average('lgs')}</div>
+        </div>
+    `;
+
     avgContainer.style.display = 'flex';
 
-    const highlight = key => sortKey === key ? 'font-weight:bold;background:#fff9db' : '';
+    const highlight = key =>
+        sortKey === key ? 'font-weight:bold;background:#fff9db' : '';
+
     tbody.innerHTML = displayData.map((d, i) => `
         <tr>
             <td>${i + 1}</td>
@@ -675,7 +962,8 @@ function siralamaGuncelle() {
             <td style="${highlight('fen')}">${d.fen.toFixed(2)}</td>
             <td style="color:#2980b9;${highlight('total')}">${d.total.toFixed(2)}</td>
             <td class="lgs-only" style="color:#e67e22;${highlight('lgs')}">${d.lgs.toFixed(2)}</td>
-        </tr>`).join('');
+        </tr>
+    `).join('');
 }
 
 const CLASS_METRICS = [
@@ -689,29 +977,41 @@ const CLASS_METRICS = [
 
 function ortalama(records, key) {
     if (!records.length) return 0;
-    return records.reduce((sum, record) => sum + Number(record[key] || 0), 0) / records.length;
+
+    return records.reduce((sum, record) =>
+        sum + Number(record[key] || 0), 0
+    ) / records.length;
 }
 
 function sinifAnaliziGuncelle() {
     const classSelect = document.getElementById('classAnalysisFilter');
     const selectedClass = classSelect.value;
+
     const tbody = document.querySelector('#classTrendTable tbody');
     const legend = document.getElementById('classTrendLegend');
 
     if (!dataStore.length || !selectedClass) {
         tbody.innerHTML = '<tr><td colspan="10">Lütfen bir sınıf seçin.</td></tr>';
-        drawEmptySvg('classTrendChart', selectedClass ? 'Veri bulunamadı' : 'Sınıf seçin');
+
+        drawEmptySvg(
+            'classTrendChart',
+            selectedClass ? 'Veri bulunamadı' : 'Sınıf seçin'
+        );
+
         legend.innerHTML = '';
         return;
     }
 
     const gradeRecords = getActiveGradeData();
+
     const selectedRecords = selectedClass === ALL_CLASSES
         ? gradeRecords.slice()
         : gradeRecords.filter(d => d.className === selectedClass);
 
     if (!selectedRecords.length) {
-        tbody.innerHTML = '<tr><td colspan="10">Seçilen sınıfa ait kayıt bulunamadı.</td></tr>';
+        tbody.innerHTML =
+            '<tr><td colspan="10">Seçilen sınıfa ait kayıt bulunamadı.</td></tr>';
+
         drawEmptySvg('classTrendChart', 'Kayıt bulunamadı');
         legend.innerHTML = '';
         return;
@@ -719,32 +1019,51 @@ function sinifAnaliziGuncelle() {
 
     // Sınav sırası, CSV dosyasındaki ilk görünme sırasına göre korunur.
     const examOrder = [...new Set(gradeRecords.map(d => d.exam))];
+
     const summaries = examOrder.map(exam => {
         const records = selectedRecords.filter(d => d.exam === exam);
+
         if (!records.length) return null;
-        const summary = { exam, count: records.length };
-        ['tur', 'ink', 'din', 'ing', 'mat', 'fen', 'total', 'lgs'].forEach(key => {
-            summary[key] = ortalama(records, key);
-        });
+
+        const summary = {
+            exam,
+            count: records.length
+        };
+
+        ['tur', 'ink', 'din', 'ing', 'mat', 'fen', 'total', 'lgs']
+            .forEach(key => {
+                summary[key] = ortalama(records, key);
+            });
+
         const schoolRecords = gradeRecords.filter(d => d.exam === exam);
+
         summary.school = {};
-        ['tur', 'ink', 'din', 'ing', 'mat', 'fen', 'total', 'lgs'].forEach(key => {
-            summary.school[key] = ortalama(schoolRecords, key);
-        });
+
+        ['tur', 'ink', 'din', 'ing', 'mat', 'fen', 'total', 'lgs']
+            .forEach(key => {
+                summary.school[key] = ortalama(schoolRecords, key);
+            });
+
         return summary;
     }).filter(Boolean);
 
     if (!summaries.length) {
-        tbody.innerHTML = '<tr><td colspan="10">Seçilen sınıf için sınav ortalaması hesaplanamadı.</td></tr>';
+        tbody.innerHTML =
+            '<tr><td colspan="10">Seçilen sınıf için sınav ortalaması hesaplanamadı.</td></tr>';
+
         drawEmptySvg('classTrendChart', 'Grafik verisi bulunamadı');
         legend.innerHTML = '';
         return;
     }
 
-    const metricKey = document.getElementById('classMetricFilter').value || 'total';
+    const metricKey =
+        document.getElementById('classMetricFilter').value || 'total';
+
     const metricTitle = branchNames[metricKey] || 'Genel Net';
+
     const classValues = summaries.map(item => item[metricKey]);
     const schoolValues = summaries.map(item => item.school[metricKey]);
+
     const showSchoolComparison = selectedClass !== ALL_CLASSES;
 
     drawClassTrendChart(
@@ -771,12 +1090,15 @@ function sinifAnaliziGuncelle() {
             <td>${item.fen.toFixed(2)}</td>
             <td style="font-weight:bold;color:#2980b9">${item.total.toFixed(2)}</td>
             <td class="lgs-only" style="font-weight:bold;color:#e67e22">${item.lgs.toFixed(2)}</td>
-        </tr>`).join('');
+        </tr>
+    `).join('');
 }
 
 function drawEmptySvg(svgId, message) {
     const svg = document.getElementById(svgId);
+
     if (!svg) return;
+
     svg.innerHTML = message
         ? `<text x="500" y="205" text-anchor="middle" fill="#95a5a6" font-size="18">${escapeHtml(message)}</text>`
         : '';
@@ -784,116 +1106,245 @@ function drawEmptySvg(svgId, message) {
 
 function drawClassTrendChart(labels, classValues, schoolValues, title, showSchoolComparison) {
     const svg = document.getElementById('classTrendChart');
-    const W = 1000, H = 400, left = 75, right = 25, top = 40, bottom = 70;
-    const plotW = W - left - right, plotH = H - top - bottom;
-    const allValues = showSchoolComparison ? classValues.concat(schoolValues) : classValues.slice();
-    let min = Math.min(...allValues), max = Math.max(...allValues);
+
+    const W = 1000;
+    const H = 400;
+    const left = 75;
+    const right = 25;
+    const top = 40;
+    const bottom = 70;
+
+    const plotW = W - left - right;
+    const plotH = H - top - bottom;
+
+    const allValues = showSchoolComparison
+        ? classValues.concat(schoolValues)
+        : classValues.slice();
+
+    let min = Math.min(...allValues);
+    let max = Math.max(...allValues);
+
     if (!Number.isFinite(min) || !Number.isFinite(max)) {
         drawEmptySvg('classTrendChart', 'Grafik verisi bulunamadı');
         return;
     }
-    if (min === max) { min -= 1; max += 1; }
+
+    if (min === max) {
+        min -= 1;
+        max += 1;
+    }
+
     const padding = (max - min) * 0.12;
+
     min -= padding;
     max += padding;
-    const x = i => labels.length === 1 ? left + plotW / 2 : left + (i / (labels.length - 1)) * plotW;
-    const y = value => top + plotH - ((value - min) / (max - min)) * plotH;
-    const toPoints = values => values.map((value, i) => `${x(i).toFixed(1)},${y(value).toFixed(1)}`).join(' ');
+
+    const x = i =>
+        labels.length === 1
+            ? left + plotW / 2
+            : left + (i / (labels.length - 1)) * plotW;
+
+    const y = value =>
+        top + plotH - ((value - min) / (max - min)) * plotH;
+
+    const toPoints = values =>
+        values.map((value, i) =>
+            `${x(i).toFixed(1)},${y(value).toFixed(1)}`
+        ).join(' ');
+
     let drawing = '';
 
     for (let i = 0; i <= 5; i++) {
         const value = min + (max - min) * (i / 5);
         const yy = y(value);
-        drawing += `<line x1="${left}" y1="${yy}" x2="${W - right}" y2="${yy}" stroke="#e9ecef" stroke-width="1"/>`;
-        drawing += `<text x="${left - 10}" y="${yy + 4}" text-anchor="end" fill="#6c757d" font-size="12">${value.toFixed(1)}</text>`;
+
+        drawing += `
+            <line x1="${left}" y1="${yy}" x2="${W - right}" y2="${yy}"
+                stroke="#e9ecef" stroke-width="1"/>
+            <text x="${left - 10}" y="${yy + 4}" text-anchor="end"
+                fill="#6c757d" font-size="12">${value.toFixed(1)}</text>
+        `;
     }
 
-    drawing += `<text x="${W / 2}" y="21" text-anchor="middle" fill="#2c3e50" font-size="16" font-weight="bold">${escapeHtml(title)} — sınavlara göre değişim</text>`;
+    drawing += `
+        <text x="${W / 2}" y="21" text-anchor="middle"
+            fill="#2c3e50" font-size="16" font-weight="bold">
+            ${escapeHtml(title)} — sınavlara göre değişim
+        </text>
+    `;
+
     labels.forEach((label, i) => {
         const xx = x(i);
-        drawing += `<text x="${xx}" y="${H - 22}" text-anchor="middle" fill="#6c757d" font-size="11" transform="rotate(-20 ${xx} ${H - 22})">${escapeHtml(label)}</text>`;
+
+        drawing += `
+            <text x="${xx}" y="${H - 22}" text-anchor="middle"
+                fill="#6c757d" font-size="11"
+                transform="rotate(-20 ${xx} ${H - 22})">
+                ${escapeHtml(label)}
+            </text>
+        `;
     });
 
     if (showSchoolComparison && labels.length > 1) {
-        drawing += `<polyline points="${toPoints(schoolValues)}" fill="none" stroke="#e67e22" stroke-width="3" stroke-dasharray="7 6" stroke-linecap="round" stroke-linejoin="round"/>`;
+        drawing += `
+            <polyline points="${toPoints(schoolValues)}"
+                fill="none" stroke="#e67e22" stroke-width="3"
+                stroke-dasharray="7 6" stroke-linecap="round"
+                stroke-linejoin="round"/>
+        `;
     }
+
     if (labels.length > 1) {
-        drawing += `<polyline points="${toPoints(classValues)}" fill="none" stroke="#3498db" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>`;
+        drawing += `
+            <polyline points="${toPoints(classValues)}"
+                fill="none" stroke="#3498db" stroke-width="4"
+                stroke-linecap="round" stroke-linejoin="round"/>
+        `;
     }
+
     classValues.forEach((value, i) => {
-        drawing += `<circle cx="${x(i)}" cy="${y(value)}" r="5" fill="#fff" stroke="#3498db" stroke-width="3"/>`;
+        drawing += `
+            <circle cx="${x(i)}" cy="${y(value)}" r="5"
+                fill="#fff" stroke="#3498db" stroke-width="3"/>
+        `;
     });
+
     if (showSchoolComparison) {
         schoolValues.forEach((value, i) => {
-            drawing += `<circle cx="${x(i)}" cy="${y(value)}" r="3.5" fill="#e67e22"/>`;
+            drawing += `
+                <circle cx="${x(i)}" cy="${y(value)}" r="3.5"
+                    fill="#e67e22"/>
+            `;
         });
     }
+
     svg.innerHTML = drawing;
 }
 
-
 function getArrow(current, previous) {
     if (previous === null) return '';
-    if (current > previous) return ' <span style="color:#27ae60;font-weight:bold">↑</span>';
-    if (current < previous) return ' <span style="color:#e74c3c;font-weight:bold">↓</span>';
+
+    if (current > previous) {
+        return ' <span style="color:#27ae60;font-weight:bold">↑</span>';
+    }
+
+    if (current < previous) {
+        return ' <span style="color:#e74c3c;font-weight:bold">↓</span>';
+    }
+
     return ' <span style="color:#95a5a6;font-weight:bold">-</span>';
 }
 
 function analizGuncelle() {
     const student = document.getElementById('studentFilter').value;
+
     let studentIdentity = null;
+
     if (student) {
-        try { studentIdentity = JSON.parse(student); } catch (e) { studentIdentity = null; }
+        try {
+            studentIdentity = JSON.parse(student);
+        } catch (e) {
+            studentIdentity = null;
+        }
     }
+
     const gradeRecords = getActiveGradeData();
+
     const filtered = studentIdentity && Array.isArray(studentIdentity)
-        ? gradeRecords.filter(d => d.name === studentIdentity[0] && d.className === studentIdentity[1])
+        ? gradeRecords.filter(d =>
+            d.name === studentIdentity[0] &&
+            d.className === studentIdentity[1]
+        )
         : [];
+
     const tbody = document.querySelector('#resTable tbody');
     const stats = document.getElementById('statsContainer');
+
     if (!student) {
-        const selectedClass = document.getElementById('individualClassFilter').value;
-        const message = selectedClass ? 'Lütfen bir öğrenci seçin.' : 'Lütfen önce bir sınıf seçin.';
+        const selectedClass =
+            document.getElementById('individualClassFilter').value;
+
+        const message = selectedClass
+            ? 'Lütfen bir öğrenci seçin.'
+            : 'Lütfen önce bir sınıf seçin.';
+
         tbody.innerHTML = `<tr><td colspan="9">${message}</td></tr>`;
         stats.innerHTML = '';
+
         drawEmptyChart('');
         return;
     }
+
     if (!filtered.length) {
-        tbody.innerHTML = '<tr><td colspan="9">Seçilen sınıf ve öğrenci için kayıt bulunamadı.</td></tr>';
+        tbody.innerHTML =
+            '<tr><td colspan="9">Seçilen sınıf ve öğrenci için kayıt bulunamadı.</td></tr>';
+
         stats.innerHTML = '';
+
         drawEmptyChart('Kayıt bulunamadı');
         return;
     }
 
     const schoolAvgData = filtered.map(se => {
         const examData = gradeRecords.filter(d => d.exam === se.exam);
-        return examData.length ? examData.reduce((sum, d) => sum + d[currentBranch], 0) / examData.length : 0;
+
+        return examData.length
+            ? examData.reduce((sum, d) => sum + d[currentBranch], 0) / examData.length
+            : 0;
     });
 
     tbody.innerHTML = filtered.map((d, i) => {
         const previous = i > 0 ? filtered[i - 1] : null;
-        return `<tr>
-            <td>${escapeHtml(d.exam)}</td>
-            <td>${d.tur.toFixed(2)}${getArrow(d.tur, previous ? previous.tur : null)}</td>
-            <td>${d.ink.toFixed(2)}${getArrow(d.ink, previous ? previous.ink : null)}</td>
-            <td>${d.din.toFixed(2)}${getArrow(d.din, previous ? previous.din : null)}</td>
-            <td>${d.ing.toFixed(2)}${getArrow(d.ing, previous ? previous.ing : null)}</td>
-            <td>${d.mat.toFixed(2)}${getArrow(d.mat, previous ? previous.mat : null)}</td>
-            <td>${d.fen.toFixed(2)}${getArrow(d.fen, previous ? previous.fen : null)}</td>
-            <td style="font-weight:bold;color:#2980b9">${d.total.toFixed(2)}${getArrow(d.total, previous ? previous.total : null)}</td>
-            <td class="lgs-only" style="font-weight:bold;color:#e67e22">${d.lgs.toFixed(2)}${getArrow(d.lgs, previous ? previous.lgs : null)}</td>
-        </tr>`;
+
+        return `
+            <tr>
+                <td>${escapeHtml(d.exam)}</td>
+                <td>${d.tur.toFixed(2)}${getArrow(d.tur, previous ? previous.tur : null)}</td>
+                <td>${d.ink.toFixed(2)}${getArrow(d.ink, previous ? previous.ink : null)}</td>
+                <td>${d.din.toFixed(2)}${getArrow(d.din, previous ? previous.din : null)}</td>
+                <td>${d.ing.toFixed(2)}${getArrow(d.ing, previous ? previous.ing : null)}</td>
+                <td>${d.mat.toFixed(2)}${getArrow(d.mat, previous ? previous.mat : null)}</td>
+                <td>${d.fen.toFixed(2)}${getArrow(d.fen, previous ? previous.fen : null)}</td>
+                <td style="font-weight:bold;color:#2980b9">
+                    ${d.total.toFixed(2)}${getArrow(d.total, previous ? previous.total : null)}
+                </td>
+                <td class="lgs-only" style="font-weight:bold;color:#e67e22">
+                    ${d.lgs.toFixed(2)}${getArrow(d.lgs, previous ? previous.lgs : null)}
+                </td>
+            </tr>
+        `;
     }).join('');
 
     const studentValues = filtered.map(d => d[currentBranch]);
-    drawChart(filtered.map(d => d.exam), studentValues, schoolAvgData, branchNames[currentBranch]);
+
+    drawChart(
+        filtered.map(d => d.exam),
+        studentValues,
+        schoolAvgData,
+        branchNames[currentBranch]
+    );
+
     const last = filtered[filtered.length - 1];
-    const averageValue = studentValues.reduce((a, b) => a + b, 0) / studentValues.length;
+
+    const averageValue =
+        studentValues.reduce((a, b) => a + b, 0) / studentValues.length;
+
     stats.innerHTML = `
-        <div class="stat-card"><h4>Son Durum</h4><div class="stat-value">${last[currentBranch].toFixed(2)}</div></div>
-        <div class="stat-card"><h4>Öğrenci Ort.</h4><div class="stat-value">${averageValue.toFixed(2)}</div></div>
-        <div class="stat-card"><h4>Sınav Sayısı</h4><div class="stat-value">${filtered.length}</div></div>`;
+        <div class="stat-card">
+            <h4>Son Durum</h4>
+            <div class="stat-value">${last[currentBranch].toFixed(2)}</div>
+        </div>
+
+        <div class="stat-card">
+            <h4>Öğrenci Ort.</h4>
+            <div class="stat-value">${averageValue.toFixed(2)}</div>
+        </div>
+
+        <div class="stat-card">
+            <h4>Sınav Sayısı</h4>
+            <div class="stat-value">${filtered.length}</div>
+        </div>
+    `;
 }
 
 function drawEmptyChart(message) {
@@ -902,80 +1353,195 @@ function drawEmptyChart(message) {
 
 function drawChart(labels, student, school, title) {
     const svg = document.getElementById('devChart');
-    const W = 1000, H = 400, left = 70, right = 25, top = 35, bottom = 60;
-    const plotW = W - left - right, plotH = H - top - bottom;
+
+    const W = 1000;
+    const H = 400;
+    const left = 70;
+    const right = 25;
+    const top = 35;
+    const bottom = 60;
+
+    const plotW = W - left - right;
+    const plotH = H - top - bottom;
+
     const all = student.concat(school);
-    let min = Math.min(...all), max = Math.max(...all);
-    if (!Number.isFinite(min) || !Number.isFinite(max)) { drawEmptyChart('Grafik verisi yok'); return; }
-    if (min === max) { min -= 1; max += 1; }
-    const padding = (max - min) * .12; min -= padding; max += padding;
-    const x = i => labels.length === 1 ? left + plotW / 2 : left + (i / (labels.length - 1)) * plotW;
-    const y = v => top + plotH - ((v - min) / (max - min)) * plotH;
-    const points = arr => arr.map((v, i) => `${x(i).toFixed(1)},${y(v).toFixed(1)}`).join(' ');
-    let html = '';
-    for (let i = 0; i <= 5; i++) {
-        const value = min + (max - min) * (i / 5), yy = y(value);
-        html += `<line x1="${left}" y1="${yy}" x2="${W - right}" y2="${yy}" stroke="#e9ecef" stroke-width="1"/>`;
-        html += `<text x="${left - 10}" y="${yy + 4}" text-anchor="end" fill="#6c757d" font-size="12">${value.toFixed(1)}</text>`;
+
+    let min = Math.min(...all);
+    let max = Math.max(...all);
+
+    if (!Number.isFinite(min) || !Number.isFinite(max)) {
+        drawEmptyChart('Grafik verisi yok');
+        return;
     }
-    html += `<text x="${W / 2}" y="20" text-anchor="middle" fill="#2c3e50" font-size="16" font-weight="bold">${escapeHtml(title)}</text>`;
+
+    if (min === max) {
+        min -= 1;
+        max += 1;
+    }
+
+    const padding = (max - min) * .12;
+
+    min -= padding;
+    max += padding;
+
+    const x = i =>
+        labels.length === 1
+            ? left + plotW / 2
+            : left + (i / (labels.length - 1)) * plotW;
+
+    const y = v =>
+        top + plotH - ((v - min) / (max - min)) * plotH;
+
+    const points = arr =>
+        arr.map((v, i) =>
+            `${x(i).toFixed(1)},${y(v).toFixed(1)}`
+        ).join(' ');
+
+    let html = '';
+
+    for (let i = 0; i <= 5; i++) {
+        const value = min + (max - min) * (i / 5);
+        const yy = y(value);
+
+        html += `
+            <line x1="${left}" y1="${yy}" x2="${W - right}" y2="${yy}"
+                stroke="#e9ecef" stroke-width="1"/>
+
+            <text x="${left - 10}" y="${yy + 4}" text-anchor="end"
+                fill="#6c757d" font-size="12">${value.toFixed(1)}</text>
+        `;
+    }
+
+    html += `
+        <text x="${W / 2}" y="20" text-anchor="middle"
+            fill="#2c3e50" font-size="16" font-weight="bold">
+            ${escapeHtml(title)}
+        </text>
+    `;
+
     labels.forEach((label, i) => {
         const xx = x(i);
-        html += `<text x="${xx}" y="${H - 28}" text-anchor="middle" fill="#6c757d" font-size="11" transform="rotate(-20 ${xx} ${H - 28})">${escapeHtml(label)}</text>`;
+
+        html += `
+            <text x="${xx}" y="${H - 28}" text-anchor="middle"
+                fill="#6c757d" font-size="11"
+                transform="rotate(-20 ${xx} ${H - 28})">
+                ${escapeHtml(label)}
+            </text>
+        `;
     });
+
     if (labels.length > 1) {
-        html += `<polyline points="${points(school)}" fill="none" stroke="#e67e22" stroke-width="3" stroke-dasharray="7 6" stroke-linecap="round" stroke-linejoin="round"/>`;
-        html += `<polyline points="${points(student)}" fill="none" stroke="#3498db" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>`;
+        html += `
+            <polyline points="${points(school)}"
+                fill="none" stroke="#e67e22" stroke-width="3"
+                stroke-dasharray="7 6" stroke-linecap="round"
+                stroke-linejoin="round"/>
+
+            <polyline points="${points(student)}"
+                fill="none" stroke="#3498db" stroke-width="4"
+                stroke-linecap="round" stroke-linejoin="round"/>
+        `;
     }
+
     student.forEach((value, i) => {
-        html += `<circle cx="${x(i)}" cy="${y(value)}" r="5" fill="#fff" stroke="#3498db" stroke-width="3"/>`;
+        html += `
+            <circle cx="${x(i)}" cy="${y(value)}" r="5"
+                fill="#fff" stroke="#3498db" stroke-width="3"/>
+        `;
     });
+
     svg.innerHTML = html;
 }
 
 function switchMainTab(tab) {
-    document.querySelectorAll('.view-section').forEach(section => section.classList.remove('active'));
-    document.querySelectorAll('.main-tabs button').forEach(button => button.classList.remove('active'));
+    document.querySelectorAll('.view-section').forEach(section =>
+        section.classList.remove('active')
+    );
+
+    document.querySelectorAll('.main-tabs button').forEach(button =>
+        button.classList.remove('active')
+    );
 
     if (tab === 'analiz') {
         document.getElementById('analizView').classList.add('active');
         document.getElementById('tabAnalizBtn').classList.add('active');
+
     } else if (tab === 'siralama') {
         document.getElementById('siralamaView').classList.add('active');
         document.getElementById('tabSiralamaBtn').classList.add('active');
+
         siralamaGuncelle();
+
     } else {
         document.getElementById('sinifAnalizView').classList.add('active');
         document.getElementById('tabSinifBtn').classList.add('active');
+
         sinifAnaliziGuncelle();
     }
 }
 
 function setBranch(key, button) {
     currentBranch = key;
-    document.querySelectorAll('#branchTabs button').forEach(item => item.classList.remove('active'));
+
+    document.querySelectorAll('#branchTabs button').forEach(item =>
+        item.classList.remove('active')
+    );
+
     button.classList.add('active');
+
     analizGuncelle();
 }
 
 function csvEscape(value) {
     const s = String(value == null ? '' : value);
-    return /[;,"\n\r]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s;
+
+    return /[;,"\n\r]/.test(s)
+        ? '"' + s.replace(/"/g, '""') + '"'
+        : s;
 }
 
 function csvRaporAl() {
     const gradeRecords = getActiveGradeData();
-    if (!gradeRecords.length) { alert('İndirilecek veri bulunamadı.'); return; }
-    let csv = '\uFEFFÖğrenci Adı Soyadı;Sınıfı;Sınav Adı;Türkçe;Sosyal/İnkılap;Din;İngilizce;Matematik;Fen;Toplam Net;LGS Puanı\n';
+
+    if (!gradeRecords.length) {
+        alert('İndirilecek veri bulunamadı.');
+        return;
+    }
+
+    let csv =
+        '\uFEFFÖğrenci Adı Soyadı;Sınıfı;Sınav Adı;Türkçe;Sosyal/İnkılap;Din;İngilizce;Matematik;Fen;Toplam Net;LGS Puanı\n';
+
     gradeRecords.forEach(d => {
-        csv += [d.name, d.className, d.exam, d.tur, d.ink, d.din, d.ing, d.mat, d.fen, d.total, d.lgs]
-            .map(csvEscape).join(';') + '\n';
+        csv += [
+            d.name,
+            d.className,
+            d.exam,
+            d.tur,
+            d.ink,
+            d.din,
+            d.ing,
+            d.mat,
+            d.fen,
+            d.total,
+            d.lgs
+        ].map(csvEscape).join(';') + '\n';
     });
-    const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+
+    const blob = new Blob([csv], {
+        type: 'text/csv;charset=utf-8;'
+    });
+
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
-    a.href = url; a.download = (activeGrade || 'Sinif') + '_Sinif_Deneme_Analiz_Raporu.csv';
-    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+
+    a.href = url;
+    a.download = (activeGrade || 'Sinif') + '_Sinif_Deneme_Analiz_Raporu.csv';
+
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+
     setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
 
